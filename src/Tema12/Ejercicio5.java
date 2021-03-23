@@ -6,6 +6,7 @@ import java.io.IOException;
 public class Ejercicio5 {
 
 	public static void main(String[] args) {
+		//Recibe cadena de caracteres (en args) y guarda en fichero (en args) del revés
 		FileWriter salida = null;
 		
 		if(args.length!=2) {
