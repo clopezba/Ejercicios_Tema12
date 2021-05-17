@@ -22,6 +22,7 @@ public class Ejercicio10 {
 			System.out.println("3. Salir");
 			
 			opcion = s.nextInt();
+			s.nextLine();
 			
 			switch(opcion) {
 			case 1:
@@ -36,11 +37,11 @@ public class Ejercicio10 {
 	public static Cliente introducirDatos() {
 		
 		System.out.println("Nombre: ");
-		String nombre= s.next();
+		String nombre= s.nextLine();
 		System.out.println("Teléfono: ");
-		String telefono = s.next();
+		String telefono = s.nextLine();
 		System.out.println("Dirección: ");
-		String direccion = s.next();
+		String direccion = s.nextLine();
 		System.out.println("NIF: ");
 		String nif = s.next();
 		System.out.println("¿Debe dinero? (true/false)");
@@ -61,16 +62,18 @@ public class Ejercicio10 {
 			
 			System.out.println("Introduzca los datos del cliente: ");
 			obj.writeObject(introducirDatos());
-			System.out.println("¿Desea introducir más clientes? S/N");
+			System.out.println("¿Desea introducir más clientes? s/n");
 			String opt = s.next();
-			while(opt.equals("S")) {
+			s.nextLine();
+			while(opt.equals("s")) {
 				switch(opt) {
-				case "S":
+				case "s":
 					obj.writeObject(introducirDatos());
 					break;
 				}
-				System.out.println("¿Desea introducir más clientes? S/N");
+				System.out.println("¿Desea introducir más clientes? s/n");
 				opt=s.next();
+				s.nextLine();
 			}
 			obj.close();
 		} 
